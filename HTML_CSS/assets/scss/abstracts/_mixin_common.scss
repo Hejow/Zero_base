@@ -1,0 +1,17 @@
+@mixin scroll-x {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap; // 가로로 쭉 펼쳐짐
+    -webkit-overflow-scrolling: touch; // 모바일에서 터치 시 가속도를 발생시킴!
+    -ms-overflow-style: none; // IE 스크롤바 감추기
+    scrollbar-width: none; // Firefox 스크롤바 감추기
+    &::-webkit-scrollbar {
+        display: none; // chrome 스크롤바 감추기
+    }
+}
+
+@mixin ellipse {
+    text-overflow: ellipsis; 
+    white-space: nowrap; // 오른쪽으로 쭉 이어지게 한다!
+    overflow: hidden;
+}
